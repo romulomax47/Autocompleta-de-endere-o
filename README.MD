@@ -5,7 +5,7 @@ Ao preenche o campo 'Digite seu Cep' o solfware buscará seu endereço e preench
 
 
 ### Ferramentas utilizadas 🏗️.
---Html5
---Css
---Javascript
---Bootstrap
+-- Html5
+-- Css
+-- Javascript
+- Bootstrap
