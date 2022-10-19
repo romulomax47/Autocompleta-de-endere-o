@@ -8,9 +8,9 @@ const bairro = document.querySelector("#bairro");
 const region  = document.querySelector("#region");
 const formInputs  = document.querySelectorAll("[data-input]");
 const fadeElement = document.querySelector('#fade');
-const btn = document.querySelector("#btn")
+const btn = document.querySelector("#btn");
 
-const closeButton =document.querySelector("#close-message");
+const closeButton = document.querySelector("#close-message");
 //Validade CEPP
 cepInput.addEventListener("keypress",(e) => {
 
@@ -44,7 +44,7 @@ const getAddress = async (cep) => {
     const data = await response.json();
 
     //Error
-    if(data.erro ==='true'){
+    if(data.erro === true ){
         if(!addressInput.hasAttribute("disabled")){
             toggleDisabled();
 
@@ -58,9 +58,6 @@ const getAddress = async (cep) => {
     if(bairro.value === ""){
         toggleDisabled();
     }
-    
-        
-        
     
     addressInput.value =data.logradouro;
     city.value =data.localidade
@@ -93,21 +90,21 @@ const toggleLoader = () =>{
     loaderElemento.classList.toggle('hide')
 }
 
+// close modal
+closeButton.addEventListener('click',() => toggleMessage() )
+
 const toggleMessage = (msg) =>{
 
     const messageElement = document.querySelector('#message');
     const messageText = document.querySelector("#message p");
     messageText.innerText = msg;
+    cepInput.removeAttribute('disabled')
+
 
     fadeElement.classList.toggle('hide')
     messageElement.classList.toggle('hide')
 };
 
-// close modal
-
-closeButton.addEventListener('click',() => toggleMessage() )
-
-//SAVE
 
 addresFrom.addEventListener('submit', (e) => {
     e.preventDefault();
