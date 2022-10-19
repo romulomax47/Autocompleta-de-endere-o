@@ -11,4 +11,4 @@ Ao preenche o campo 'Digite seu Cep' o solfware buscará seu endereço e preench
 - Bootstrap
 
 #### Deploy do projeto
-(ptojeto)[https://romulomax47.github.io/Autocompleta-de-endere-o/]
+[ptojeto](https://romulomax47.github.io/Autocompleta-de-endere-o/)
